@@ -1,8 +1,14 @@
+/*============ Mobile =============*/
+
+/*============ Reset ============*/
+
 *{
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+/*============ Root =============*/
 
 :root{
   --ff-highline:'Staatliches', sans-serif;
@@ -18,10 +24,11 @@
   font-size: 62.5%;
 }
 
+/*============ Body =============*/
+
 body{
  font-family: var(--ff-body);
 }
-
 
 header{
   background-color: var(--background-header-color);
@@ -30,8 +37,6 @@ header{
   align-items: center;
   
 }
-
-/*avaliar esse header img*/
 
 header  img {
   width: 14rem;
@@ -59,6 +64,7 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--background-main-color);
 }
 
 .main-paragraph p{
@@ -69,6 +75,7 @@ h1{
   color: var(--p-color);
   max-width: 36rem;
   text-align: center;
+  
   
 }
 
@@ -139,7 +146,7 @@ footer a{
   color: var(--p-color);
 }
 
-/* ANIMAÇÕES */
+/*=========== Animações =============*/
 
 @keyframes topdown{
 
@@ -169,8 +176,76 @@ footer a{
 
 }
 
+/*========= Desktop ========*/
+
+@media (min-width: 1000px) {
+
+  body {
+  display: flex;
+  flex-direction: row;
+}
 
 
+header {
+  max-width: 38rem;
+  height: 100vh;
+} 
+
+.main-paragraph {
+  background-color: var(--background-header-color);
+}
+
+.main-paragraph p {
+  font-size: 2.4rem;
+  font-family: 'Roboto', sans-serif;
+  line-height: 2.8rem;
+  color: var(--h1-color);
+  max-width: 58rem;
+  text-align: center;
+  padding: 1.4rem 5rem;
+  margin: 1.4rem 0 6.5rem;
+}
+
+main {
+  width: calc((100vw) - (38rem));
+  background-color: #ffffff;
+} 
+
+.cards {
+  display: grid;
+  grid-template-areas: 
+  "A B C"
+  "D B F"
+  "D E F";
+  gap: 3.2rem;
+  padding: 6.4rem 8rem;
+}
+
+.cards div:nth-child(1){
+  grid-area: A;
+}
+
+.cards div:nth-child(2){
+  grid-area: B;
+}
+.cards div:nth-child(3){
+  grid-area: C;
+  display: block;
+}
+.cards div:nth-child(4){
+  grid-area: D;
+}
+.cards div:nth-child(5){
+  grid-area: E;
+}
+.cards div:nth-child(6){
+  grid-area: F;
+  display: block;
+}
 
 
+footer {
+  background-color: #ffffff;
+}
 
+}
